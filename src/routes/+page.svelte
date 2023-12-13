@@ -40,15 +40,29 @@
 <Navbar />
 
 <main>
-	<div class="risoprint-container">
-		<div class="layer flower-background"></div>
-		<!-- Other layers -->
-		<div class="layer base-layer"><h1>Alle Wensen</h1></div>
-		<div class="layer color-layer1"></div>
-		<div class="layer color-layer2"></div>
-		<!-- More layers as needed -->
+	<div class="sub-header">
+		<div class="risoprint-container block_1">
+			<!-- Other layers -->
+			<div class="layer base-layer"><h2>Overizchtspagina</h2></div>
+			<div class="layer color-layer1"></div>
+			<div class="layer color-layer2"></div>
+			<!-- More layers as needed -->
+		</div>
+		<div class="risoprint-container block_2">
+			<!-- Other layers -->
+			<div class="layer base-layer"><h2>over</h2></div>
+			<div class="layer color-layer1"></div>
+			<div class="layer color-layer2"></div>
+			<!-- More layers as needed -->
+		</div>
+		<div class="risoprint-container block_3">
+			<!-- Other layers -->
+			<div class="layer base-layer"><h1>Alle Wensen</h1></div>
+			<div class="layer color-layer1"></div>
+			<div class="layer color-layer2"></div>
+			<!-- More layers as needed -->
+		</div>
 	</div>
-
 	<LayoutView {filteredWishes} {searchInput} {searchWishes} />
 
 	<section id="custom-view" class="grid-overview wishes">
@@ -62,11 +76,32 @@
 
 <style>
 	/* Magical risoprint animation */
-	.risoprint-container {
+	.block_1 {
 		position: relative;
+		width: 100%;
+		height: 100px;
+	}
+	.block_2 {
+		position: relative;
+		grid-column: auto/span 2;
+		width: 100%;
+		height: 100px;
+	}
+	.block_3 {
+		position: relative;
+		grid-column: auto/span 3;
+		grid-row: auto/span 2;
+		width: 100%;
 		height: 200px;
+	}
+	.sub-header {
+		border: 1px solid #c5c5c5;
+		display: grid;
 		margin-top: 30px;
 		margin-bottom: 30px;
+		grid-gap: 10px;
+
+		grid: auto-flow dense / 700px 60px 1fr;
 	}
 
 	.layer {
@@ -100,21 +135,6 @@
 	.color-layer2 {
 		/* ... */
 		z-index: 4;
-	}
-
-	/* Continue with other layers and keyframe animations as previously defined */
-	.risoprint-container {
-		position: relative;
-		width: 100%;
-		height: 200px;
-	}
-
-	.layer {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
 	}
 
 	.base-layer {
