@@ -42,27 +42,22 @@
 <main>
 	<div class="sub-header">
 		<div class="risoprint-container block_1">
-			<!-- Other layers -->
 			<div class="layer base-layer"><h2>Overizchtspagina</h2></div>
 			<div class="layer color-layer1"></div>
 			<div class="layer color-layer2"></div>
-			<!-- More layers as needed -->
 		</div>
 		<div class="risoprint-container block_2">
-			<!-- Other layers -->
 			<div class="layer base-layer"><h2>over</h2></div>
 			<div class="layer color-layer1"></div>
 			<div class="layer color-layer2"></div>
-			<!-- More layers as needed -->
 		</div>
 		<div class="risoprint-container block_3">
-			<!-- Other layers -->
 			<div class="layer base-layer"><h1>Alle Wensen</h1></div>
 			<div class="layer color-layer1"></div>
 			<div class="layer color-layer2"></div>
-			<!-- More layers as needed -->
 		</div>
 	</div>
+
 	<LayoutView {filteredWishes} {searchInput} {searchWishes} />
 
 	<section id="custom-view" class="grid-overview wishes">
@@ -100,7 +95,6 @@
 		margin-top: 30px;
 		margin-bottom: 30px;
 		grid-gap: 10px;
-
 		grid: auto-flow dense / 700px 60px 1fr;
 	}
 
@@ -115,8 +109,8 @@
 	.flower-background {
 		background-image: url('https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/c4/71/9a/c4719a88-b80d-87b6-3c37-1308f8c9c3ef/artwork.jpg/592x592bf.webp'); /* Add your flower image here */
 		background-size: cover;
-		opacity: 0.6; /* Adjust for desired visibility */
-		z-index: 3; /* Ensure it's below other layers */
+		opacity: 0.6;
+		z-index: 3;
 	}
 
 	.base-layer {
@@ -138,18 +132,18 @@
 	}
 
 	.base-layer {
-		background-color: #f0e4d7; /* Base color */
+		background-color: #f0e4d7;
 	}
 
 	.color-layer1 {
-		background-color: rgba(255, 0, 0, 0.5); /* Semi-transparent red */
-		transform: translate(2px, 2px); /* Slight misalignment */
+		background-color: rgba(255, 0, 0, 0.5);
+		transform: translate(2px, 2px);
 		animation: magicEffect 5s infinite;
 	}
 
 	.color-layer2 {
-		background-color: rgba(0, 0, 255, 0.5); /* Semi-transparent blue */
-		transform: translate(-2px, -2px); /* Slight misalignment */
+		background-color: rgba(0, 0, 255, 0.5);
+		transform: translate(-2px, -2px);
 	}
 
 	@keyframes magicEffect {
