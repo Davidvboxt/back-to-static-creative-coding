@@ -90,7 +90,6 @@
 		height: 200px;
 	}
 	.sub-header {
-		border: 1px solid #c5c5c5;
 		display: grid;
 		margin-top: 30px;
 		margin-bottom: 30px;
