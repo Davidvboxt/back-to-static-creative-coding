@@ -157,10 +157,18 @@
 		<h1>3. Electrical abstract gradient breath</h1>
 	</section>
 
-	<section class="thunder">
-		<div id="lightning-container">
-			<h1 id="breathing-header">Alle Wensen</h1>
-			<div class="rain"></div>
+	<section class="animatie-3">
+		<div class="maan">
+			<div class="noise"></div>
+			<div class="center">
+				<div class="circle"></div>
+			</div>
+		</div>
+		<div class="thunder">
+			<div id="lightning-container">
+				<h1 id="breathing-header">Alle Wensen</h1>
+				<div class="rain"></div>
+			</div>
 		</div>
 	</section>
 
@@ -183,33 +191,68 @@
 		margin-bottom: 20px;
 	}
 
-	/* Magical risoprint animation 3 */
-	.thunder {
+	.animatie-3 {
+		display: flex;
+		background: linear-gradient(135deg, midnightblue, #111);
 		height: 300px;
+		overflow: hidden;
+		margin-bottom: 18px;
+		border-radius: 8px;
+	}
+
+	.maan {
+		position: relative;
+		top: -33vh;
+		width: 600px;
+		height: 600px;
+	}
+
+	.noise {
+		margin-top: -15%;
 		width: 100%;
-		margin-top: 50px;
-		margin-bottom: 50px;
+		height: 120%;
+		background: radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)),
+			url("data:image/svg+xml,%3Csvg viewBox='0 0 600 600' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+		filter: contrast(145%) brightness(650%) invert(100%);
+		mix-blend-mode: screen;
+	}
+
+	@media all and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
+		.noise {
+			filter: contrast(125%) brightness(650%) invert(100%);
+			mix-blend-mode: color-dodge;
+		}
+	}
+
+	.center {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100%;
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		background-color: black;
-		color: white;
-		animation: thunder 0.3s linear infinite;
-		
 	}
 
-	@keyframes thunder {
-		0% {
-			background-position: 0% 0%;
-		}
-		100% {
-			background-position: 20% 100%;
-		}
+	.circle {
+		width: 200px;
+		height: 200px;
+		background-color: antiquewhite;
+		border-radius: 50%;
+	}
+
+	.thunder {
+		position: absolute;
+		left: 43%;
+		/* margin: auto 0px; */
+		/* top: 400px; */
+		top: 2779px;
 	}
 
 	#breathing-header {
 		font-size: 3rem;
-		text-align: center;
+		padding-top: 80px;
+
 		color: #00bfff; /* Deep Sky Blue */
 		animation:
 			glow 1.5s ease-in-out infinite alternate,
@@ -246,13 +289,14 @@
 	.rain::before {
 		content: '';
 		position: absolute;
-		width: 100%;
-		height: 100%;
+		width: 250px;
+		height: 250px;
 		background-image: url('https://w7.pngwing.com/pngs/428/585/png-transparent-white-lightning-illustration-lightning-strike-lightning-blue-computer-wallpaper-desktop-wallpaper.png');
 		/* top: -100px; */
 		transform: rotate(180deg);
 		animation: lightining 4s linear infinite;
 		opacity: 1;
+		background-size: cover;
 	}
 	@keyframes lightining {
 		0% {
