@@ -256,7 +256,7 @@
 		color: #00bfff; /* Deep Sky Blue */
 		animation:
 			glow 1.5s ease-in-out infinite alternate,
-			breathe 3s ease-in-out infinite;
+			breathe 4s ease-in-out infinite;
 	}
 
 	@keyframes glow {
